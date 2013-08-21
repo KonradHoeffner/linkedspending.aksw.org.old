@@ -4,3 +4,6 @@
 [submodule "libraries/Erfurt"]
 	path = libraries/Erfurt
 	url = git://github.com/AKSW/Erfurt.git
+[submodule "extensions/cubeviz"]
+	path = extensions/cubeviz
+	url = https://github.com/AKSW/cubeviz.ontowiki.git
