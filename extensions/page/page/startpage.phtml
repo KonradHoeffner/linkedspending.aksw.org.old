@@ -48,7 +48,7 @@ Dates are handled by the XSD vocabulary, currencies are taken from DBpedia and c
 		<li><a href='http://linkedspending.aksw.org/sparql/'>Virtuoso SPARQL Editor</a></li>
 	  </ul> 
 	<p>
-          <a href="http://linkedspending.aksw.org/sparql?default-graph-uri=&query=select+distinct+%3Fdate+{%3Fo+a+qb%3AObservation.+%3Fo+qb%3AdataSet+ls%3Ade-bund.+%3Fo+sdmxd%3ArefPeriod+%3Fdate.+FILTER+%28xsd%3Adate%28%3Fdate%29+%3E%3D+%222020-1-1%22^^xsd%3Adate%29+}&format=text%2Fhtml&timeout=0&debug=on" style="float:right; background-color:#4C78A4;color:white;font-size:1.5em;margin-left:2em" class="button"> Example Query </a>
+          <a href="http://linkedspending.aksw.org/sparql?default-graph-uri=&query=select+distinct+%3Fdate+{%3Fo+a+qb%3AObservation.+%3Fo+qb%3AdataSet+ls%3Ade-bund.+%3Fo+lso%3ArefDate+%3Fdate.+FILTER+%28xsd%3Adate%28%3Fdate%29+%3E%3D+%222020-1-1%22^^xsd%3Adate%29+}&format=text%2Fhtml&timeout=0&debug=on" style="float:right; background-color:#4C78A4;color:white;font-size:1.5em;margin-left:2em" class="button"> Example Query </a>
 
 
 	  As an example you can click on the Example Query Button on the right. It selects all years which have observations in the de-bund dataset observations from the de-bund dataset from the year 2020 onwards.
@@ -91,9 +91,9 @@ Dates are handled by the XSD vocabulary, currencies are taken from DBpedia and c
         If you have further ideas or questions about this tool feel free to contact us at:<br>
 <table style="width:40%">
 <tr><td><b>AKSW team</b></td><td><a href='http://aksw.org/Team'>Website</a></td></tr>
-<tr><td><b>Konrad Höffner (Creator and Maintainer)</b></td><td><a href='http://bis.informatik.uni-leipzig.de/KonradHoeffner'>Website</a></td></tr>
-<tr><td><b>Michael Martin (OntoWiki Developer, Data Cube Expert)</b></td><td><a href='http://bis.informatik.uni-leipzig.de/MichaelMartin'>Website</a></td></tr>
-<tr><td><b>Jens Lehmann (LATC Initiative, Cooperations)</b></td><td><a href='http://bis.informatik.uni-leipzig.de/JensLehmann'>Website</a></td></tr>
+<tr><td><b>Konrad Höffner (Creator and Maintainer)</b></td><td><a href='http://aksw.org/KonradHoeffner'>Website</a></td></tr>
+<tr><td><b>Michael Martin (OntoWiki Developer, Data Cube Expert)</b></td><td><a href='http://aksw.org/MichaelMartin'>Website</a></td></tr>
+<tr><td><b>Jens Lehmann (Project Supervisor)</b></td><td><a href='http://jens-lehmann.org/'>Website</a></td></tr>
 </table>
 
         For further information about AKSW please visit our <a href='http://aksw.org/'>website</a>.
