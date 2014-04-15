@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ontowiki (0.9.11-2) lod2; urgency=low
 
   * fix lod2 virtuoso dependency
@@ -11,6 +12,8 @@ ontowiki (0.9.11-1) lod2; urgency=low
 
  -- Sebastian Tramp <tramp@informatik.uni-leipzig.de>  Wed, 05 Feb 2014 12:55:33 +0100
 
+=======
+>>>>>>> 493f89634c1325efedc2a00066123a1fd026b52e
 ontowiki (0.9.11) lod2; urgency=low
 
   * Improve model selection in linkeddataserver extension
