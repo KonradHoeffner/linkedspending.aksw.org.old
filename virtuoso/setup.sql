@@ -1,0 +1,2 @@
+update DB.DBA.HTTP_PATH set HP_OPTIONS = serialize(vector('browse_sheet', '', 'noinherit', 'yes', 'cors', '*', 'cors_restricted', 0))  where HP_LPATH = '/sparql';
+DB.DBA.XML_SET_NS_DECL ('lso', 'http://linkedspending.aksw.org/ontology/', 2);
