@@ -1,6 +1,8 @@
+version: '3.7'
+
 services:
   virtuoso:
-    image: tenforce/virtuoso:virtuoso7.2.5
+    image: tenforce/virtuoso:1.1.0-virtuoso7.2.4
     restart: unless-stopped
     environment:
       DBA_PASSWORD: dba
@@ -30,7 +32,7 @@ services:
       - "8080:80"
 
   ontowiki:
-    build: .
+    image: aksw/ontowiki
     restart: unless-stopped
     environment:
       VIRTUOSO_ENV_DBA_PASSWORD: dba
@@ -42,6 +44,6 @@ services:
       - virtuoso
 
 volumes:
-  libvirtodbc:
-  ontowiki:
-  models:
+    libvirtodbc: {}
+    ontowiki: {}
+    models: {}
