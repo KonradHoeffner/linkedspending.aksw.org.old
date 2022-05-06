@@ -1,0 +1,38 @@
+# LinkedSpending Toolset, Maintainer: Konrad Höffner <konrad.hoeffner@uni-leipzig.de>
+
+services:
+
+  rdf:
+    build: ./rdf
+    volumes:
+      - rdf:/rdf
+
+  virtuoso:
+    build: ./virtuoso
+    environment:
+      - DBA_PASSWORD=${DBA_PASSWORD}
+      - SPARQL_UPDATE='false'
+    volumes:
+      - virtuoso-data:/data
+      - rdf:/data/toLoad:ro
+    ports:
+      - "127.0.0.1:8080:8890"
+      - "127.0.0.1:1111:1111"
+    restart: unless-stopped
+
+  lodview:
+    image: ghcr.io/konradhoeffner/lodview:latest
+    environment:
+      # server side, so we use the internal port
+      - LodViewendpoint=http://virtuoso:8890/sparql
+      - LodViewIRInamespace=http://linkedspending.aksw.org/
+      - LodViewhomeUrl=http://linkedspending.aksw.org/instance/finland-aid
+    ports:
+      - "127.0.0.1:8889:8080"
+    depends_on:
+      - virtuoso
+    restart: unless-stopped
+
+volumes:
+  virtuoso-data:
+  rdf:
